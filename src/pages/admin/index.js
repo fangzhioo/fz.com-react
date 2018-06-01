@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import { AdminUsers , AdminArticles} from '../../router/index'
 
-
 class Admin extends Component{
 
     render(){
