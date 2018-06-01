@@ -1,0 +1,54 @@
+// 主题配置
+$THEME_FONT_COLOR: #333;
+$THEME_BORDER_COLOR: #f0F0F0;
+$THEME_BG_COLOR:#ffffff;
+
+/*------------------css 1px解决方案-----------------------*/
+@mixin common-border-one ($type,$color) {
+    content: '';
+    position: absolute;
+    @if $type == left {
+        height:100%;
+        width:1px;
+        left:0;
+        top:0;
+        transform: scaleX(0.5);
+        border-left: 1px solid $color;
+    } @else if $type == right {
+        height:100%;
+        width:1px;
+        right:0;
+        top:0;
+        transform: scaleX(0.5);
+        border-right: 1px solid $color;
+    } @else if $type == top {
+        height:1px;
+        width:100%;
+        left:0;
+        top:0;
+        transform: scaleY(0.5);
+        border-top: 1px solid $color;
+    } @else {
+        height:1px;
+        width:100%;
+        bottom:0;
+        left:0;
+        transform: scaleY(0.5);
+        border-bottom: 1px solid $color;
+    }
+    z-index: 1;
+}
+@mixin common-border-all ($color,$radius) {
+    position: absolute;
+    top: -0.5px;
+    left: -0.5px;
+    width: 200%;
+    height: 200%;
+    content: '';
+    border: 1px solid $color;
+    border-radius: $radius;
+    transform: scale(0.5);
+    transform-origin: top left;
+    z-index: -1;
+    display:block;
+}
