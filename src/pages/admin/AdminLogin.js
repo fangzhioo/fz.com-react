@@ -24,6 +24,7 @@ class AdminLogin extends Component{
                 console.log("success",res);
                 if(res.data.resp_code === '000000'){
                     message.success(res.data.result.nickname + " 登录成功！");
+                    this.props.history.push('/home');
                 }else{
                     message.error(res.data.resp_message);
                 }
