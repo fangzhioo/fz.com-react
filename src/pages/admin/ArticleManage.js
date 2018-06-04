@@ -5,6 +5,7 @@ class ArticleManage extends Component{
     render(){
         return (
             <div> ArticleManage</div>
+            
         )
     }
 }

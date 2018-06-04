@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route,Switch} from 'react-router-dom';
-import { Home , Admin ,AdminLogin, Article , NotFound} from "./router/index"
+import { Home , Admin ,AdminLogin, Article , NotFound, ArticlePublish} from "./router/index"
 
 class App extends Component {
   // constructor(props,context){
@@ -16,6 +16,7 @@ class App extends Component {
                <Route path="/login" component={AdminLogin}/>
                <Route path="/home" component={Home}/>
                <Route path="/admin" component={Admin}/>
+               <Route exact path="/article/publish" component={ArticlePublish}/>  
                <Route path="/article/:id" component={Article}/>
                <Route component={ NotFound }/>
             </Switch>

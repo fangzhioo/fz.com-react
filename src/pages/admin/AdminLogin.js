@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import './admin.css';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Icon, Input, Button, Checkbox,message } from 'antd';
 const FormItem = Form.Item;
 
 
@@ -9,9 +9,32 @@ class AdminLogin extends Component{
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
-            console.log(values);
           if (!err) {
             console.log('Received values of form: ', values);
+            // http
+            let data = {
+                user:{
+                    username:values.username,
+                    password:values.password
+                },
+                remember:values.remember
+            },
+            url = "http://192.168.13.103:8888/api/v1/users/login";
+            window.$http.post(url,data).then(res=>{
+                console.log("success",res);
+                if(res.data.resp_code === '000000'){
+                    message.success(res.data.result.nickname + " 登录成功！");
+                    this.props.history.push('/home');
+                }else{
+                    message.error(res.data.resp_message);
+                }
+            }).catch(err =>{
+                console.log("error",err);
+            })
+
+          }else{
+              console.log('has a err: ',err);
+              
           }
         });
     }
@@ -22,7 +45,7 @@ class AdminLogin extends Component{
         <div className="login-box">
             <Form onSubmit={this.handleSubmit} className="login-form">
                 <FormItem>
-                    {getFieldDecorator('userName', {
+                    {getFieldDecorator('username', {
                         rules: [{ required: true, message: 'Please input your username!' }],
                     })(
                         <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />

@@ -8,6 +8,8 @@ export const AdminArticles = asyncComponent(()=>import('../pages/admin/ArticleMa
 export const AdminLogin = asyncComponent(()=>import('../pages/admin/AdminLogin'));
 
 export const Article = asyncComponent(()=>import('../pages/article/index'));
+export const ArticlePublish = asyncComponent(()=>import('../pages/article/publishArticle'));
+
 
 export const NotFound = asyncComponent(()=>import('../common/NotFound'));
 

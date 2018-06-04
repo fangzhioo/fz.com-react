@@ -7,7 +7,7 @@ class Article extends Component{
             <div className="article-detail"> 
                 <div>Article {this.props.match.params.id}</div>
                 <div>
-                    {console.log(this)}
+                   
                 </div>
             </div>
         )
