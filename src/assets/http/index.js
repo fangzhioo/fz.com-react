@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // 请求基础地址
-axios.defaults.url = "http://192.168.13.103:8888";
+axios.defaults.baseURL = "http://192.168.13.103:8888/api/v1/";
 
 // 请求信息
 axios.defaults.headers.get['Content-Type'] = 'application/json;charset=utf-8';
