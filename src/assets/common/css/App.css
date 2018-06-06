@@ -1,28 +1,53 @@
-.App {
-  text-align: center;
+
+.rdw-storybook-editor {
+  border: 1px solid #F1F1F1;
+  padding: 5px;
+  border-radius: 2px;
+  height: 200px;
+}
+.rdw-storybook-toolbar {
+  top: -130px;
+}
+.rdw-storybook-textarea {
+  margin-top: 20px;
+  resize: none;
+  width: 100%;
+  border: 1px solid #F1F1F1;
+  height: 100px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.rdw-editor-main {
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.rdw-editor-toolbar {
+  padding: 6px 5px 0;
+  border-radius: 2px;
+  border: 1px solid #F1F1F1;
+  display: flex;
+  justify-content: flex-start;
+  background: white;
+  flex-wrap: wrap;
+  font-size: 15px;
+  margin-bottom: 5px;
+  user-select: none;
 }
-
-.App-title {
-  font-size: 1.5em;
+.public-DraftStyleDefault-block {
+  margin: 1em 0;
 }
-
-.App-intro {
-  font-size: large;
+.rdw-editor-wrapper:focus {
+  outline: none;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.rdw-editor-wrapper {
+  box-sizing: content-box;
+}
+.rdw-editor-main blockquote {
+  border-left: 5px solid #f1f1f1;
+  padding-left: 5px;
+}
+.rdw-editor-main pre {
+  background: #f1f1f1;
+  border-radius: 3px;
+  padding: 1px 10px;
 }

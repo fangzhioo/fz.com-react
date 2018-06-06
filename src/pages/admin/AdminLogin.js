@@ -19,7 +19,7 @@ class AdminLogin extends Component{
                 },
                 remember:values.remember
             },
-            url = "http://192.168.13.103:8888/api/v1/users/login";
+            url = "users/login";
             window.$http.post(url,data).then(res=>{
                 console.log("success",res);
                 if(res.data.resp_code === '000000'){

@@ -1,10 +1,18 @@
+/*
+ * @Author: fangzhi 
+ * @Date: 2018-06-06 10:10:52 
+ * @Last Modified by:   fangzhi 
+ * @Last Modified time: 2018-06-06 10:10:52 
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/common/css/base.css';
+import './assets/common/css/App.css';
 import 'antd/dist/antd.min.css';
+
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import axios from 'axios'
+import axios from './assets/http/index';
 
 window.$http = axios;
 

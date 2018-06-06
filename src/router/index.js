@@ -9,7 +9,7 @@ export const AdminLogin = asyncComponent(()=>import('../pages/admin/AdminLogin')
 
 export const Article = asyncComponent(()=>import('../pages/article/index'));
 export const ArticlePublish = asyncComponent(()=>import('../pages/article/publishArticle'));
-
+export const ArticleDetail = asyncComponent(()=>import('../pages/article/articleDetail'));
 
 export const NotFound = asyncComponent(()=>import('../common/NotFound'));
 
